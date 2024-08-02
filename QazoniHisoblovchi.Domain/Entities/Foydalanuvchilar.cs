@@ -8,7 +8,7 @@ namespace QazoniHisoblovchi.Domain.Entities
         public string? Name { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public FoydalanuvchiEnum Maqom {  get; set; }
+        public FoydalanuvchiEnum Martaba {  get; set; }
 
     }
 }

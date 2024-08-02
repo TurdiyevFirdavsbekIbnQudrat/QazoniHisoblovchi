@@ -1,4 +1,5 @@
-
+using QazoniHisoblovchi.Application;
+using QazoniHisoblovchi.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructure(builder.Configuration);
