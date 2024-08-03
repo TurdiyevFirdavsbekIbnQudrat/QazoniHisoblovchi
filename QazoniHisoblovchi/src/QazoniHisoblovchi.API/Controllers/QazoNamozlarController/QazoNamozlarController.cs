@@ -7,6 +7,7 @@ using QazoniHisoblovchi.API.DTO.QazoNamozDto;
 using QazoniHisoblovchi.Application.UseCases.FoydalanuvchiUseCases.FoydalanuvchiCommands;
 using QazoniHisoblovchi.Application.UseCases.FoydalanuvchiUseCases.FoydalanuvchiQueries;
 using QazoniHisoblovchi.Application.UseCases.QazoNamozlariUseCases.QazoNamozlarCommands;
+using QazoniHisoblovchi.Application.UseCases.QazoNamozlariUseCases.QazoNamozlarQueries;
 using QazoniHisoblovchi.Domain.Entities;
 
 namespace QazoniHisoblovchi.API.Controllers.QazoNamozlarController
@@ -31,14 +32,14 @@ namespace QazoniHisoblovchi.API.Controllers.QazoNamozlarController
         [HttpGet]
         public async ValueTask<IActionResult> GetAllQazoNamozlar()
         {
-            IEnumerable<Foydalanuvchilar> result = await _mediator.Send(new GetAllFoydalanuvchiCommand());
+            IEnumerable<QazoNamozlar> result = await _mediator.Send(new QazoNamozlarGetAllCommand());
             return Ok(result);
         }
         //3 bittasini olish
         [HttpGet]
-        public async ValueTask<IActionResult> GetQazoNamozlarByIdAsync(string login)
+        public async ValueTask<IActionResult> GetQazoNamozlarByIdAsync(int id)
         {
-            GetByLoginFoydalanuvchiCommand command = new GetByLoginFoydalanuvchiCommand { Login = login };
+            QazoNamozlarGetByIdCommand command = new QazoNamozlarGetByIdCommand { id=id };
             return Ok(await _mediator.Send(command));
         }
 
