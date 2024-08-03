@@ -20,12 +20,13 @@ namespace QazoniHisoblovchi.Application.UseCases.FoydalanuvchiUseCases.Foydalanu
         public async Task<bool> Handle(DeleteFoydalanuvchiCommand request, CancellationToken cancellationToken)
         {
             Foydalanuvchilar foydalanuvchi = await _qazoHisoblovchi.foydalanuvchilar.FirstOrDefaultAsync(x => x.Login == request.Login);
-
+            QazoNamozlar qazo = await _qazoHisoblovchi.qazoNamozlar.FirstOrDefaultAsync(x => x.FoydalanuvchiId == foydalanuvchi.id);
             if (foydalanuvchi != null)
             {
                 try
                 {
                     _qazoHisoblovchi.foydalanuvchilar.Remove(foydalanuvchi);
+                    _qazoHisoblovchi.qazoNamozlar.Remove(qazo);
                     await _qazoHisoblovchi.SaveChangesAsync(cancellationToken);
                     return true;
                 }
