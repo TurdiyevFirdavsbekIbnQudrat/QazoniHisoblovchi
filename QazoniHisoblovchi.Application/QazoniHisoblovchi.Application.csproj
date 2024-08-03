@@ -17,8 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\FoydalanuvchiUseCases\FoydalanuvchiQueries\" />
-    <Folder Include="UseCases\FoydalanuvchiUseCases\FoydalanuvchiHandlers\" />
     <Folder Include="UseCases\QazoNamozlariUseCases\" />
   </ItemGroup>
 

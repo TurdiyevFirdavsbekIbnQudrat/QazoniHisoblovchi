@@ -13,6 +13,7 @@
         public string XuftonSafar { get; set; }
         public string Vitr { get; set; }
         public string Roza { get; set; }
+        public int FoydalanuvchiId {  get; set; }
 
     }
 }
