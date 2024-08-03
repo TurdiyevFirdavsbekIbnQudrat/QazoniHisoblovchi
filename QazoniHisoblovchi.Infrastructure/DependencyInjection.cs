@@ -11,7 +11,7 @@ namespace QazoniHisoblovchi.Infrastructure
         {
             string connectionsString = "Server=DESKTOP-HUHB6EP;Database=QazolarDb;Trusted_Connection=True;TrustServerCertificate=True;";
             services.AddDbContext<IQazoHisoblovchiDbContext, QazoHisoblovchiDbContext>(options =>
-            options.UseSqlServer(connectionsString)
+            options.UseSqlServer(connectionsString, providerOptions => providerOptions.EnableRetryOnFailure())
             );
             return services;
         }

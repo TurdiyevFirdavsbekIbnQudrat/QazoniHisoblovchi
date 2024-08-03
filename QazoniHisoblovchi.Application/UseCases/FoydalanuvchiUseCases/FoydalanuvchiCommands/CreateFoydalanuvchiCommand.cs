@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using QazoniHisoblovchi.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,6 @@ namespace QazoniHisoblovchi.Application.UseCases.FoydalanuvchiUseCases.Foydalanu
         public string Name { get; set; }
         public string Login { get; set; }
         public string Password {  get; set; }
-        public int Martaba {  get; set; }
+        public FoydalanuvchiEnum Martaba {  get; set; }
     }
 }
