@@ -16,8 +16,4 @@
     <ProjectReference Include="..\QazoniHisoblovchi.Domain\QazoniHisoblovchi.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\QazoNamozlariUseCases\" />
-  </ItemGroup>
-
 </Project>

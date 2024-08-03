@@ -1,11 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace QazoniHisoblovchi.Domain.Entities
+namespace QazoniHisoblovchi.Application.UseCases.QazoNamozlariUseCases.QazoNamozlarCommands
 {
-    public class QazoNamozlar
+    public class QazoNamozlarCreateCommand:IRequest<bool>
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
         public string Bomdod { get; set; }
         public string Peshin { get; set; }
         public string PeshinSafar { get; set; }
@@ -16,7 +19,6 @@ namespace QazoniHisoblovchi.Domain.Entities
         public string XuftonSafar { get; set; }
         public string Vitr { get; set; }
         public string Roza { get; set; }
-        public int FoydalanuvchiId {  get; set; }
-
+        public string Login { get; set; }
     }
 }

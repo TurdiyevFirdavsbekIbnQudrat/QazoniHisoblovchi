@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace QazoniHisoblovchi.Domain.Entities
+﻿namespace QazoniHisoblovchi.API.DTO.QazoNamozDto
 {
-    public class QazoNamozlar
+    public class QazoNamozCreateDto
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
         public string Bomdod { get; set; }
         public string Peshin { get; set; }
         public string PeshinSafar { get; set; }
@@ -16,7 +12,5 @@ namespace QazoniHisoblovchi.Domain.Entities
         public string XuftonSafar { get; set; }
         public string Vitr { get; set; }
         public string Roza { get; set; }
-        public int FoydalanuvchiId {  get; set; }
-
     }
 }

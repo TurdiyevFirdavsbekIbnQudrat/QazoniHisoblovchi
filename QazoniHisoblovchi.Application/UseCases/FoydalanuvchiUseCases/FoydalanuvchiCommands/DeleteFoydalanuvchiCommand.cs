@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace QazoniHisoblovchi.Application.UseCases.FoydalanuvchiUseCases.FoydalanuvchiCommands
 {
-    public class DeleteFoydalanuvchiCommand
+    public class DeleteFoydalanuvchiCommand:IRequest<bool>
     {
-        public int id { get; set; }
+        public string Login { get; set; }
     }
 }
